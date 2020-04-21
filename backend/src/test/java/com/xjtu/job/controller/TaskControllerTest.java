@@ -83,4 +83,26 @@ public class TaskControllerTest {
                 .contentType(MediaType.APPLICATION_JSON).content(new Gson().toJson(task)))
                 .andDo(print()).andExpect(status().isNotFound());
     }
+
+    @Test
+    public void shouldGetAll() throws Exception {
+        when(service.getAll()).thenReturn(tasks);
+        this.mockMvc.perform(get("/api/tasks")).andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].content").value("a"));
+    }
+
+    @Test
+    public void shouldFindTaskByIdIfPresent() throws Exception {
+        when(service.find(3L)).thenReturn(Optional.of(new Task(3L, "X")));
+        this.mockMvc.perform(get("/api/tasks/3")).andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.content").value("X"));
+    }
+
+    @Test
+    public void shouldReturnNotFoundWhenFindByIdIfNotPresent() throws Exception {
+        when(service.find(3L)).thenReturn(Optional.empty());
+        this.mockMvc.perform(get("/api/tasks/3")).andDo(print()).andExpect(status().isNotFound());
+    }
+
+
 }

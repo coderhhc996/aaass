@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f42a070-5a0e-4fa8-baef-66ec6889b190" name="Default Changelist" comment="">
-<<<<<<< HEAD
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/TasksIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/TasksIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/controller/TaskControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/controller/TaskControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/service/TaskServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/service/TaskServiceTest.java" afterDir="false" />
     </list>
-=======
+
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RestServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/RestServiceApplication.java" afterDir="false" />
@@ -22,7 +22,7 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/store/TaskStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/store/TaskStoreTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
->>>>>>> create test
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,11 +149,12 @@
       <updated>1587456624052</updated>
       <workItem from="1587456627058" duration="2300000" />
       <workItem from="1587459951495" duration="4430000" />
-<<<<<<< HEAD
       <workItem from="1587486458471" duration="944000" />
-=======
+
       <workItem from="1587486740998" duration="526000" />
->>>>>>> create test
+
+      <workItem from="1587486458471" duration="2291000" />
+
     </task>
     <servers />
   </component>
@@ -220,5 +221,17 @@
       <screen x="51" y="24" width="1869" height="1056" />
     </state>
     <state x="565" y="367" key="com.intellij.ide.util.TipDialog/51.24.1869.1056@51.24.1869.1056" timestamp="1587459952543" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xjtu/job/TasksIntegrationTests.java</url>
+          <line>24</line>
+          <properties field="mockMvc" class="com.xjtu.job.TasksIntegrationTests" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -35,4 +35,16 @@ public class TaskController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    @GetMapping(produces = "application/json")
+    public List<Task> list() {
+        return taskService.getAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Task> find(@PathVariable Long id) {
+        return ResponseEntity.of(taskService.find(id));
+    }
+
+
 }
