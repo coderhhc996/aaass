@@ -47,10 +47,32 @@ describe("<TodoList>", () => {
     expect(getByTestId(document.body, "task-items")).toBeEmpty();
   });
 
+  test("should edit todo item correctly", async () => {
+    jest
+      .spyOn(TodoApi, "updateTodo")
+      .mockImplementation(() => Promise.resolve(updateItem));
+
+    await act(async () => {
+      render(<TodoList />);
+    });
+
+    const textarea = document.querySelector("li textarea");
+    act(() => {
+      fireEvent.click(getByTestId(document.body, "edit-button"));
+      fireEvent.change(textarea, {
+        target: { value: updateItem.content },
+      });
+      fireEvent.blur(textarea);
+    });
+
+    await wait(() => expect(TodoApi.updateTodo).toHaveBeenCalled());
+    expect(textarea.value).toEqual(updateItem.content);
+  });
+
   test("should add todo item correctly", async () => {
     jest
-        .spyOn(TodoApi, "addTodo")
-        .mockImplementation(() => Promise.resolve(addedItem));
+      .spyOn(TodoApi, "addTodo")
+      .mockImplementation(() => Promise.resolve(addedItem));
 
     await act(async () => {
       render(<TodoList />);
@@ -71,19 +93,4 @@ describe("<TodoList>", () => {
     expect(taskItems.length).toEqual(2);
     expect(taskItems[1]).toHaveTextContent(addedItem.content);
   });
-
-    const textarea = document.querySelector("li textarea");
-    act(() => {
-      fireEvent.click(getByTestId(document.body, "edit-button"));
-      fireEvent.change(textarea, {
-        target: { value: updateItem.content },
-      });
-      fireEvent.blur(textarea);
-    });
-
-    await wait(() => expect(TodoApi.updateTodo).toHaveBeenCalled());
-    expect(textarea.value).toEqual(updateItem.content);
-  });
-
-
 });

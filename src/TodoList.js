@@ -38,6 +38,15 @@ const TodoList = () => {
       setList(list.filter((item) => item.id !== id));
     });
 
+  const handleUpdateTask = (task) => {
+    if (task.content === "") return;
+
+    updateTodo(task).then((response) => {
+      setList(
+        list.map((x) => (x.id === response.id ? { ...x, ...response } : x))
+      );
+    });
+  };
 
   useEffect(() => {
     handleLoadTasks();
@@ -72,6 +81,7 @@ const TodoList = () => {
             item={item}
             index={item.id}
             onItemDelete={handleDeleteTask}
+            onItemUpdate={handleUpdateTask}
           />
         ))}
       </ul>

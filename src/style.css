@@ -2,10 +2,10 @@
   border: none;
   background-color: inherit;
   padding: 20px 15px;
-  font-size: 16px;
+  font-size: 22px;
   cursor: pointer;
   display: inline-block;
-  color: dodgerblue;
+  color: #ffe4e4;
 }
 
 /* On mouse-over */
@@ -17,15 +17,22 @@
   height: 45px;
   width: 100px;
   font-size:18px;
+    border-radius:25px;
 } 
 
 .task-input {
   margin: 0 30px;
   height: 40px;
   width: 400px;
+    background-color: #ffe7e7;
+    color: #693838;
+    box-shadow: 1px 1px 8px 0px #6b2727;
+    font-size: 19px;
+    border-radius:25px;
 }
 
 h1 {
   margin: 50px;
   text-align:center;
+    color: #ffe4e4;
 }
