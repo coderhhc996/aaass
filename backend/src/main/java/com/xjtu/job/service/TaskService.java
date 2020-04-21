@@ -26,8 +26,14 @@ public class TaskService {
     }
 
     public Optional<Task> update(Task task) {
-
-        return null;
+        List<Task> tasks = new ArrayList<>(store.readTasks());
+        Optional<Task> any = tasks.stream().filter(task1 -> task1.getId() == task.getId()).findAny();
+        if (any.isPresent()) {
+            any.get().setContent(task.getContent());
+            any.get().setUpdatedAt();
+            store.writeTasks(tasks);
+        }
+        return any;
     }
 
 
