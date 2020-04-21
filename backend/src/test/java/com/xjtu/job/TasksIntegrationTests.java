@@ -34,6 +34,16 @@ public class TasksIntegrationTests {
     }
 
     @Test
+    @Order(4)
+    public void shouldUpdateContentByTaskId() throws Exception {
+        this.mockMvc.perform(put("/api/tasks/2")
+                .content("{ \"content\" : \"it should work\" }")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.content").value("it should work"));
+    }
+
+    @Test
     @Order(5)
     public void shouldDeleteByTaskId() throws Exception {
         this.mockMvc.perform(delete("/api/tasks/2")

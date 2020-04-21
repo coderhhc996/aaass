@@ -63,4 +63,24 @@ public class TaskControllerTest {
         when(service.delete(2L)).thenReturn(Optional.empty());
         this.mockMvc.perform(delete("/api/tasks/2")).andDo(print()).andExpect(status().isNotFound());
     }
+
+    @Test
+    public void shouldChangeTaskById() throws Exception {
+        Task task = new Task(2L, "updated");
+        Task updated = new Task(1L, "updated");
+        when(service.update(any())).thenReturn(Optional.of(updated));
+        this.mockMvc.perform(put("/api/tasks/1")
+                .contentType(MediaType.APPLICATION_JSON).content(new Gson().toJson(task)))
+                .andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.content").value("updated"));
+    }
+
+    @Test
+    public void shouldReturnNotFoundWhenChangeTaskButDoesNotExit() throws Exception {
+        Task task = new Task(2L, "updated");
+        when(service.update(any())).thenReturn(Optional.empty());
+        this.mockMvc.perform(put("/api/tasks/1")
+                .contentType(MediaType.APPLICATION_JSON).content(new Gson().toJson(task)))
+                .andDo(print()).andExpect(status().isNotFound());
+    }
 }
