@@ -67,4 +67,36 @@ public class TaskServiceTest {
         assertFalse(optionalTask.isPresent());
         verify(taskStore, new Times(0)).writeTasks(any());
     }
+
+    @Test
+    public void shouldGetAllTasks() {
+        when(taskStore.readTasks()).thenReturn(tasks);
+
+        List<Task> all = taskService.getAll();
+
+        assertEquals(tasks, all);
+    }
+
+    @Test
+    public void shouldFindTask() {
+        tasks.add(new Task(1L, "task"));
+        when(taskStore.readTasks()).thenReturn(tasks);
+
+        Optional<Task> optionalTask = taskService.find(1L);
+
+        Task task = optionalTask.get();
+        assertEquals(1L, task.getId());
+        assertEquals("task", task.getContent());
+    }
+
+
+    @Test
+    public void shouldGetEmptyTask() {
+        when(taskStore.readTasks()).thenReturn(tasks);
+
+        Optional<Task> optionalTask = taskService.find(1L);
+
+        assertFalse(optionalTask.isPresent());
+    }
+
 }
