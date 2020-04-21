@@ -23,7 +23,10 @@ public class TaskStoreTest {
         taskStore.writeTasks(Arrays.asList(createTask(1L, "test")));
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 060dd0afd1b2abb3f38f07627f384fce0ab4cbd2
     @Test
     public void shouldReadTasks() {
         List<Task> tasks = taskStore.readTasks();
@@ -33,7 +36,10 @@ public class TaskStoreTest {
         assertEquals(LocalDateTime.of(2020, 4, 5, 0, 0), tasks.get(0).getUpdatedAt());
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 060dd0afd1b2abb3f38f07627f384fce0ab4cbd2
     @Test
     public void shouldWriteTasks() {
         List<Task> tasks = Arrays.asList(createTask(1L, "task 1"), createTask(2L, "task 2"));
@@ -45,11 +51,18 @@ public class TaskStoreTest {
         assertNotNull(tasksInStore.get(1).getUpdatedAt());
         assertEquals("task 2", tasksInStore.get(1).getContent());
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 060dd0afd1b2abb3f38f07627f384fce0ab4cbd2
 
     private Task createTask(long l, String test) {
         Task task = new Task(l, test);
         task.setUpdatedAt();
         return task;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 060dd0afd1b2abb3f38f07627f384fce0ab4cbd2

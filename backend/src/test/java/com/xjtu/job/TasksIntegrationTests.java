@@ -1,4 +1,8 @@
 package com.xjtu.job;
+<<<<<<< HEAD:backend/src/test/java/com/xjtu/job/TasksIntegrationTests.java
+=======
+
+>>>>>>> 060dd0afd1b2abb3f38f07627f384fce0ab4cbd2:backend/src/test/java/com/xjtu/job/TasksIntegrationTests.java
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -13,6 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -31,6 +36,15 @@ public class TasksIntegrationTests {
                 .andExpect(status().isCreated());
     }
 
+    @Autowired
+    private MockMvc mockMvc;
 
+    @Test
+    @Order(5)
+    public void shouldDeleteByTaskId() throws Exception {
+        this.mockMvc.perform(delete("/api/tasks/2")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print()).andExpect(status().isNoContent());
+    }
 
 }

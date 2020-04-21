@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f42a070-5a0e-4fa8-baef-66ec6889b190" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RestServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/RestServiceApplication.java" afterDir="false" />
@@ -14,6 +15,14 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/store/TaskStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/store/TaskStoreTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+    </list>
+>>>>>>> 060dd0afd1b2abb3f38f07627f384fce0ab4cbd2
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +94,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -140,7 +149,11 @@
       <updated>1587456624052</updated>
       <workItem from="1587456627058" duration="2300000" />
       <workItem from="1587459951495" duration="4430000" />
+<<<<<<< HEAD
       <workItem from="1587486740998" duration="526000" />
+=======
+      <workItem from="1587486458471" duration="944000" />
+>>>>>>> 060dd0afd1b2abb3f38f07627f384fce0ab4cbd2
     </task>
     <servers />
   </component>
