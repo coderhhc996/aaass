@@ -20,9 +20,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TasksIntegrationTests {
-
     @Autowired
     private MockMvc mockMvc;
+
+    @Test
+    @Order(2)
+    public void shouldSaveTask() throws Exception {
+        this.mockMvc.perform(post("/api/tasks")
+                .content("{ \"id\" : 2, \"content\" : \"check if it works\" }")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isCreated());
+    }
 
     @Test
     @Order(5)

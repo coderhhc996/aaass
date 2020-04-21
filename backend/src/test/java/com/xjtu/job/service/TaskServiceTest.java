@@ -3,6 +3,7 @@ package com.xjtu.job.service;
 
 import com.xjtu.job.model.Task;
 import com.xjtu.job.store.TaskStore;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -43,6 +44,17 @@ public class TaskServiceTest {
 
         Task task = optionalTask.get();
         assertEquals(1L, task.getId());
+        verify(taskStore).writeTasks(any());
+    }
+
+
+    @Test
+    public void shouldSaveTask() {
+        when(taskStore.readTasks()).thenReturn(tasks);
+
+        Task savedTask = taskService.saveTask(new Task(1L, "newTask"));
+
+        assertNotNull(savedTask.getUpdatedAt());
         verify(taskStore).writeTasks(any());
     }
 

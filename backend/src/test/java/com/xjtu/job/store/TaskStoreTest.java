@@ -23,6 +23,7 @@ public class TaskStoreTest {
         taskStore.writeTasks(Arrays.asList(createTask(1L, "test")));
     }
 
+
     @Test
     public void shouldReadTasks() {
         List<Task> tasks = taskStore.readTasks();
@@ -31,6 +32,7 @@ public class TaskStoreTest {
         assertEquals("test", tasks.get(0).getContent());
         assertEquals(LocalDateTime.of(2020, 4, 5, 0, 0), tasks.get(0).getUpdatedAt());
     }
+
 
     @Test
     public void shouldWriteTasks() {
@@ -44,9 +46,14 @@ public class TaskStoreTest {
         assertEquals("task 2", tasksInStore.get(1).getContent());
     }
 
+
     private Task createTask(long l, String test) {
         Task task = new Task(l, test);
         task.setUpdatedAt();
         return task;
     }
+
 }
+
+
+

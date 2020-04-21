@@ -1,6 +1,5 @@
 package com.xjtu.job.service;
 
-
 import com.xjtu.job.model.Task;
 import com.xjtu.job.store.TaskStore;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +15,7 @@ public class TaskService {
     @Autowired
     public TaskStore store;
 
+
     public Optional<Task> delete(Long id) {
         List<Task> tasks = store.readTasks();
         Optional<Task> any = tasks.stream().filter(task1 -> task1.getId() == id).findAny();
@@ -26,4 +26,17 @@ public class TaskService {
         return any;
     }
 
+
+
+    public Task saveTask(Task task) {
+
+
+
+        return task;
+    }
+
+
+
 }
+
+

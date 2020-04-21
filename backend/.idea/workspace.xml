@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f42a070-5a0e-4fa8-baef-66ec6889b190" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
     </list>
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RestServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/RestServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjtu/job/store/TaskStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xjtu/job/store/TaskStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RestServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/RestServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TasksIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/TasksIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/controller/TaskControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/controller/TaskControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/service/TaskServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/service/TaskServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/xjtu/job/store/TaskStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xjtu/job/store/TaskStoreTest.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+>>>>>>> create test
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,6 +116,18 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="RestServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend.main" />
@@ -122,12 +149,27 @@
       <updated>1587456624052</updated>
       <workItem from="1587456627058" duration="2300000" />
       <workItem from="1587459951495" duration="4430000" />
+<<<<<<< HEAD
       <workItem from="1587486458471" duration="944000" />
+=======
+      <workItem from="1587486740998" duration="526000" />
+>>>>>>> create test
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="51" y="214" width="1114" height="676" key="#Project_Structure" timestamp="1587460345709">
