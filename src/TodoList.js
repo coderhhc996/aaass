@@ -32,6 +32,13 @@ const TodoList = () => {
       setInputValue("");
     });
   };
+
+  const handleDeleteTask = (id) =>
+    deleteTodo(id).then(() => {
+      setList(list.filter((item) => item.id !== id));
+    });
+
+
   useEffect(() => {
     handleLoadTasks();
   }, []);
@@ -64,6 +71,7 @@ const TodoList = () => {
             key={item.id}
             item={item}
             index={item.id}
+            onItemDelete={handleDeleteTask}
           />
         ))}
       </ul>
