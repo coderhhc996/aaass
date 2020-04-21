@@ -29,9 +29,10 @@ public class TaskService {
 
 
     public Task saveTask(Task task) {
-
-
-
+        List<Task> tasks = new ArrayList<>(store.readTasks());
+        task.setUpdatedAt();
+        tasks.add(task);
+        store.writeTasks(tasks);
         return task;
     }
 
