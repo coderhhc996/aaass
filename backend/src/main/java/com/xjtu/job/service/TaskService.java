@@ -36,11 +36,11 @@ public class TaskService {
 
 
     public List<Task> getAll() {
-        return null;
+        return store.readTasks();
     }
 
     public Optional<Task> find(Long id) {
-        return null;
+        return store.readTasks().stream().filter(task -> task.getId() == id).findAny();
     }
 
 
